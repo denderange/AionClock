@@ -1,0 +1,14 @@
+:root{
+	--color-background: #001013;
+
+	--color-arrow-second: #fffb00;
+	--color-arrow-minute: #002791;
+	--color-arrow-hour: #ff0055;
+
+	--color-dial-numbers: rgb(0, 238, 255);
+
+	/* размеры стрелок */
+	--arrow-hour-size: 160px;
+	--arrow-minute-size: 195px;
+	--arrow-second-size: 210px;
+}

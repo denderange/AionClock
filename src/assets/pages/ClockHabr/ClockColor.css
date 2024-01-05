@@ -1,0 +1,110 @@
+.wrapper{
+	width: 100%;
+	height: 100vh;
+	background-color: var(--color-background);
+	padding: 20px;
+	overflow: hidden;
+}
+
+.dial{ /* циферблат */
+	position: relative;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.number-hours{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.number-hours span{
+	position: absolute;
+	transform: rotate(calc(var(--index)*30deg));
+	inset: 6px; /* отступ цифр от краев циферблата */	
+	text-align: center;
+}
+
+.number-hours span p{
+	font-size: 30px;
+	color: var(--color-dial-numbers);
+	text-shadow: 0 0 10px var(--color-dial-numbers);
+	transform: rotate(calc(var(--index)*-30deg));
+}
+
+.hands-box{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hands-box::before{
+	content: "";
+	position: absolute;
+	z-index: 33;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 25px;
+	height: 25px;
+	background-color: #0ef;
+	border-radius: 50%;
+	box-shadow: 0 0 5px #0ef;
+}
+
+.hands-box .hand{
+	position: absolute;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.hands-box .hand i{
+	display: inline-block;
+	transform-origin: bottom;
+	border-radius: 40% 40% 0 0;
+}
+
+.hands-box .hours{
+	width: calc(var(--arrow-hour-size)*2);
+	height: calc(var(--arrow-hour-size)*2);
+	transform: rotate(30deg);
+}
+
+.hands-box .hours i{
+	width: 8px;
+	height: var(--arrow-hour-size);
+	background-color: var(--color-arrow-hour);
+	box-shadow: 0 0 12px var(--color-arrow-hour);
+}
+
+.hands-box .minutes{
+	width: calc(var(--arrow-minute-size)*2);
+	height: calc(var(--arrow-minute-size)*2);
+	transform: rotate(210deg);
+}
+
+.hands-box .minutes i{
+	width: 8px;
+	height: var(--arrow-minute-size);
+	background-color: var(--color-arrow-minute);
+	box-shadow: 0 0 10px var(--color-arrow-minute);
+}
+
+.hands-box .seconds{
+	width: calc(var(--arrow-second-size)*2);
+	height: calc(var(--arrow-second-size)*2);
+	transform: rotate(150deg);
+}
+
+.hands-box .seconds i{
+	width: 4px;
+	height: var(--arrow-second-size);
+	background-color: var(--color-arrow-second);
+	box-shadow: 0 0 7px var(--color-arrow-second);
+}
