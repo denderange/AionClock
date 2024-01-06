@@ -1,14 +1,37 @@
 :root{
-	--color-background: #001013;
+	--color-background: #030e1b; /* цвет фона страницы */
+	--color-clock-face: #000b18; /* цвет фона циферблата */
+	
+	--size-clock-face: 500px;	/* размер циферблата */
+	--offset-numbers: 10px; /* отступ цифр от краев циферблата */	
 
-	--color-arrow-second: #fffb00;
-	--color-arrow-minute: #002791;
-	--color-arrow-hour: #ff0055;
+	--size-numbers: 30px; /* размер шрифта цифр циферблата */
+	--color-dial-numbers: #00aeff; /* цвет цифр */
+	
+	--color-center-circle: #00aeff; /* цвет кружка в центре стрелок */
+	--size-center-circle: 10px; /* размер кружка в центре стрелок */
+	
+	/* цвет стрелок */
+	--color-arrow-hour: #006eff;
+	--color-arrow-minute: #6600c5;
+	--color-arrow-second: #009255;
 
-	--color-dial-numbers: rgb(0, 238, 255);
+	/* длина стрелок */
+	--arrow-hour-length: 155px;
+	--arrow-minute-length: 180px;
+	--arrow-second-length: 200px;
 
-	/* размеры стрелок */
-	--arrow-hour-size: 160px;
-	--arrow-minute-size: 195px;
-	--arrow-second-size: 210px;
+	/* ширина стрелок */
+	--arrow-hour-width: 10px;
+	--arrow-minute-width: 6px;
+	--arrow-second-width: 2px;
+	
+	/* размеры рисок */
+	--hairstroke-width: 2px;
+	--hairstroke-height: 12px;
+	--hairstroke-big-width: 6px;
+	--hairstroke-big-height: 22px;
+
+	--offset-hairstroke: 50px; /* отступ рисок от краев циферблата */
+	--color-hairstroke: #0099ff; /* цвет рисок */
 }

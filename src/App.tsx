@@ -1,11 +1,12 @@
-import Clock from './assets/pages/Clock/Clock'
-import ClockColor from './assets/pages/ClockHabr/ClockColor'
+import AionClock from "./pages/AionClock/AionClock"
+// import ClockColor from "./pages/ClockColor/ClockColor"
 
 const App = () => {
 	return (
 		<>
 			{/* <Clock /> */}
-			<ClockColor />
+			{/* <ClockColor /> */}
+			<AionClock />
 		</>
 	)
 }

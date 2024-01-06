@@ -1,8 +1,11 @@
 import { useRef, useEffect, useState } from 'react'
-import './ClockColor.css'
+import './AionClock.css'
 
-const ClockColor = () => {
+const AionClock = () => {
 	const [dateState, setDateState] = useState((new Date()))
+	const currentHours = dateState.getHours()
+	const currentMinutes = dateState.getMinutes()
+	const currentSeconds = dateState.getSeconds()
 
 	const hoursDay = Array.apply(null, Array(12))
 	const barSeconds = Array.apply(null, Array(60))
@@ -13,9 +16,9 @@ const ClockColor = () => {
 
 
 	function getCurrentTime() {
-		const currentHours = dateState.getHours()
-		const currentMinutes = dateState.getMinutes()
-		const currentSeconds = dateState.getSeconds()
+		// const currentHours = dateState.getHours()
+		// const currentMinutes = dateState.getMinutes()
+		// const currentSeconds = dateState.getSeconds()
 
 		if (arrowHour.current && arrowMinute.current && arrowSecond.current) {
 			arrowHour.current.style.transform = `rotateZ(${currentHours * 30 + currentMinutes / 2}deg)`
@@ -57,16 +60,20 @@ const ClockColor = () => {
 					<div className="hand seconds" ref={arrowSecond}><i></i></div>
 				</div>
 
+				<div className="digital">
+					<span className="digital__hours">
+						{currentHours < 10 && "0"}{currentHours} : {' '}
+					</span>
+					<span className="digital__minutes">
+						{currentMinutes < 10 && "0"}{currentMinutes} : {' '}
+					</span>
+					<span className="digital__seconds">
+						{currentSeconds < 10 && "0"}{currentSeconds}
+					</span>
+				</div>
 			</div>
 		</div>
 	)
 }
 
-export default ClockColor
-
-// 1 sec = 360deg / 60sec = 6deg
-// 1 min = 360deg / 60min = 6deg
-// 1 hour = 360deg / 12hours = 30deg
-
-// 1 hour is 30deg and 60 min is 30deg = 30/60 = 1/2deg
-// hour rotate = hours*30 + minutes/2
+export default AionClock

@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react'
-import './Clock.css'
+// import './Clock.css'
 
 const Clock = () => {
 	const arrowHour = useRef<HTMLDivElement>(null)
