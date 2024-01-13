@@ -1,21 +1,9 @@
 :root{
-	--color-background: #030e1b; /* цвет фона страницы */
-	--color-clock-face: #000b18; /* цвет фона циферблата */
-	
 	--size-clock-face: 500px;	/* размер циферблата */
 	--offset-numbers: 10px; /* отступ цифр от краев циферблата */	
-
-	--size-numbers: 30px; /* размер шрифта цифр циферблата */
-	--color-dial-numbers: #00aeff; /* цвет цифр */
-	
-	--color-center-circle: #00aeff; /* цвет кружка в центре стрелок */
+	--size-numbers: 30px; /* размер шрифта цифр циферблата */	
 	--size-center-circle: 10px; /* размер кружка в центре стрелок */
 	
-	/* цвет стрелок */
-	--color-arrow-hour: #006eff;
-	--color-arrow-minute: #6600c5;
-	--color-arrow-second: #009255;
-
 	/* длина стрелок */
 	--arrow-hour-length: 155px;
 	--arrow-minute-length: 180px;
@@ -32,6 +20,29 @@
 	--hairstroke-big-width: 6px;
 	--hairstroke-big-height: 22px;
 
-	--offset-hairstroke: 50px; /* отступ рисок от краев циферблата */
+	--offset-hairstroke: 50px; /* отступ рисок от краев циферблата */	
+}
+
+html[data-theme="dark"]{
+	--color-background: #030e1b; /* цвет фона страницы */
+	--color-clock-face: #000b18; /* цвет фона циферблата */
+	--color-dial-numbers: #00aeff; /* цвет цифр */	
+	--color-center-circle: #00aeff; /* цвет кружка в центре стрелок */
 	--color-hairstroke: #0099ff; /* цвет рисок */
+	/* цвет стрелок */
+	--color-arrow-hour: #006eff;
+	--color-arrow-minute: #6600c5;
+	--color-arrow-second: #009255;
+}
+
+html[data-theme="light"]{
+	--color-background: #7eff56; /* цвет фона страницы */
+	--color-clock-face: #e5ff00; /* цвет фона циферблата */
+	--color-dial-numbers: #00aeff; /* цвет цифр */	
+	--color-center-circle: #00aeff; /* цвет кружка в центре стрелок */
+	--color-hairstroke: #0099ff; /* цвет рисок */
+	/* цвет стрелок */
+	--color-arrow-hour: #006eff;
+	--color-arrow-minute: #6600c5;
+	--color-arrow-second: #009255;
 }

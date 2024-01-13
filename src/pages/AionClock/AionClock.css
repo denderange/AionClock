@@ -5,28 +5,29 @@
 	overflow: hidden;
 }
 
+.content-container{
+	display: flex;
+}
+
+.aion-container{
+}
+
 .dial{ /* циферблат */
 	position: relative;
+	top: -30px;
 	width: var(--size-clock-face);
 	height: var(--size-clock-face);
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 40px;
-	/* animation: colorful 5s linear infinite; */
+	margin-left: 40px;
 	background-color: var(--color-clock-face);
 	box-shadow: 0 -10px 10px rgba(255,255,255, 0.03),
 							inset 0 -10px 10px rgba(255,255,255, 0.03),
 							0 10px 10px rgba(3,14,27, 0.3),
 							inset 0 10px 10px rgba(3,14,27, 0.3);
 }
-
-/* @keyframes colorful{
-	100%{
-		filter: hue-rotate(360deg);
-	}
-} */
 
 .bar-seconds,
 .number-hours{
@@ -38,6 +39,7 @@
 
 .bar-seconds span{ /* риски на циферблате */
 	position: absolute;
+	z-index: 400;
 	transform: rotate(calc(var(--index)*6deg)); /* 6deg = 360/60 */
 	inset: var(--offset-hairstroke); /* отступ рисок от краев циферблата */
 	text-align: center;
@@ -61,6 +63,7 @@
 
 .number-hours span{
 	position: absolute;
+	z-index: 410;
 	transform: rotate(calc(var(--index)*30deg));
 	inset: var(--offset-numbers); /* отступ цифр от краев циферблата */	
 	text-align: center;
@@ -73,7 +76,7 @@
 	transform: rotate(calc(var(--index)*-30deg));
 }
 
-.hands-box{
+.hands-box{ /* стрелки */
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -83,7 +86,7 @@
 .hands-box::before{
 	content: "";
 	position: absolute;
-	z-index: 33;
+	z-index: 490;
 	top: 50%;
 	transform: translateY(-50%);
 	width: var(--size-center-circle);
@@ -95,6 +98,7 @@
 
 .hands-box .hand{
 	position: absolute;
+	z-index: 430;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -148,7 +152,7 @@
 /* ------ */
 .digital{
 	position: absolute;
-	z-index: 30;
+	z-index: 480;
 	border: 1px solid #002536;
 	color: var(--color-dial-numbers);
 	background-color: #001722;
@@ -160,3 +164,54 @@
 	bottom: -60px;
 	/* margin-top: 70px; */
 }
+
+/* ------ */
+.toggle-container{
+	margin: 10px;
+}
+
+.toggle__label {
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 20px;
+}
+
+.toggle__checkbox {
+	display: none;
+}
+
+.toggle__slider {
+	position: absolute;
+	inset: 0;
+	background-color: coral;
+	border-radius: 20px;
+}
+
+.toggle__slider::before{
+	content: "";
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 2px;
+	top: 1px;
+	border-radius: 50%;
+	background-color: crimson;
+	transition: all 0.2s ease-in-out;
+}
+
+.toggle__checkbox:checked + .toggle__slider{
+	background-color: aqua;
+}
+
+.toggle__checkbox:checked + .toggle__slider::before{
+	transform: translateX(38px);
+}
+
+.toggle__text {
+	color: darkorange;
+}
+
+/* --- half-circles --- */
+

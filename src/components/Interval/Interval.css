@@ -1,0 +1,31 @@
+.pb-container{
+	position: absolute;
+	display: flex;
+	row-gap: 30px;
+	width: 420px;
+	padding: 50px 0;
+	border-radius: 8px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.progressbar{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 386px;
+	height: 386px;
+	border-radius: 50%;
+	background: conic-gradient(#33ff00 30deg, rgba(255, 79, 56, 0) 0deg);
+	transform: rotate(20deg);
+}
+
+.progressbar::before{
+	content: "";
+	position: absolute;
+	width: 370px;
+	height: 370px;
+	border-radius: 50%;
+	background-color: var(--color-clock-face);
+}

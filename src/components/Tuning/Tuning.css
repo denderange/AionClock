@@ -1,0 +1,59 @@
+.tuning-container{
+	width: 400px;
+	padding: 10px;
+	color: aliceblue;
+	border: 1px solid #fafafa;
+	background-color: #505050;
+	margin-left: 20px;
+}
+
+.tuning{
+	width: 100%;
+}
+
+.tuning__title{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.tuning h2{
+	text-align: center;
+	margin: 20px 0;
+}
+
+.interval-list__item{
+	margin-top: 20px;
+	border: 1px solid #ffdb63;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.interval-list__item:hover{
+	cursor: pointer;
+	background-color: #615e54;
+}
+
+.time-picker__button{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #776d4a;
+	background-color: #58584f;
+	color: aliceblue;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.time-picker__button:hover{
+	border: 1px solid #948551;
+	background-color: #55553b;
+	color: #fffd8e;
+}
+
+.hidden{
+	position: absolute;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	display: none;
+	opacity: 0;
+	overflow: hidden;
+}
